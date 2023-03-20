@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jndi:namedResource xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:httpconnector="http://xsd.tns.tibco.com/bw/models/sharedresource/httpconnector" xmlns:jndi="http://xsd.tns.tibco.com/amf/models/sharedresource/jndi" xmi:id="_IZ_zMMGSEe2DzrHQN8QKLQ" name="getapplicationstatus.getApplicationStatus" type="httpconnector:HttpConnectorConfiguration">
-  <jndi:configuration xsi:type="httpconnector:HttpConnectorConfiguration" xmi:id="_IaDdkMGSEe2DzrHQN8QKLQ">
-    <substitutionBindings xmi:id="_puSgkMGhEe21NfCM4lnjVw" template="port" propName="/HTTPConnection/HTTPPort"/>
-    <substitutionBindings xmi:id="_OnobUMGsEe21NfCM4lnjVw" template="host" propName="BW.HOST.NAME"/>
-  </jndi:configuration>
-</jndi:namedResource>
