@@ -1,0 +1,51 @@
+
+[
+    {
+        "name":"Environment",
+        "description":"",
+        "type":"string",
+        "value":"DEV"
+    },
+    {
+        "name":"ResponseMessage",
+        "description":"",
+        "type":"string",
+        "value":"Changes are successfully deployed to"
+    },
+    {
+        "name":"/JMSConnection/ConnURI",
+        "description":"",
+        "type":"string",
+        "value":"tibjmsnaming://emsdev:17222"
+    },
+    {
+        "name":"/JMSConnection/ConnUserId",
+        "description":"",
+        "type":"string",
+        "value":"tibcodev"
+    },
+    {
+        "name":"/JMSConnection/ConnPassword",
+        "description":"",
+        "type":"password",
+        "value":"#!ArXIHXn90/vWB3oOyGJPAVdSl+sLHNVQhjDDXrTecrU="
+    },
+    {
+        "name":"/JMSConnection/ConnectionFactoryQ",
+        "description":"",
+        "type":"string",
+        "value":"CFTibcoQueue"
+    },
+    {
+        "name":"/JMSConnection/ConnectionFactoryT",
+        "description":"",
+        "type":"string",
+        "value":"CFTibcoTopic"
+    },
+    {
+        "name":"/HTTPConnection/HTTPPort",
+        "description":"",
+        "type":"integer",
+        "value":"8087"
+    }
+]

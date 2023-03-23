@@ -1,0 +1,114 @@
+{
+	"name" : "GetApplicationStatus.application",
+	"version" : "1.0",
+	"type" : "ipaas",
+	"propertyPrefix" : "iPaaS_USER_OverRIDE_",
+	"properties" : [
+		{
+			"name" : "Environment",
+			"datatype" : "string",
+			"default" : "DEV"
+		},
+
+		{
+			"name" : "ResponseMessage",
+			"datatype" : "string",
+			"default" : "Changes are successfully deployed to"
+		},
+
+		{
+			"name" : "/JMSConnection/ConnURI",
+			"datatype" : "string",
+			"default" : "tibjmsnaming://emsdev:17222"
+		},
+
+		{
+			"name" : "/JMSConnection/ConnUserId",
+			"datatype" : "string",
+			"default" : "tibcodev"
+		},
+
+		{
+			"name" : "/JMSConnection/ConnPassword",
+			"datatype" : "password",
+			"default" : "#!ArXIHXn90/vWB3oOyGJPAVdSl+sLHNVQhjDDXrTecrU="
+		},
+
+		{
+			"name" : "/JMSConnection/ConnectionFactoryQ",
+			"datatype" : "string",
+			"default" : "CFTibcoQueue"
+		},
+
+		{
+			"name" : "/JMSConnection/ConnectionFactoryT",
+			"datatype" : "string",
+			"default" : "CFTibcoTopic"
+		},
+
+		{
+			"name" : "/HTTPConnection/HTTPPort",
+			"datatype" : "integer",
+			"default" : "8087"
+		}
+	],
+	"endpoints" : [
+		{
+			"name" : "GetApplicationStatus",
+			"protocol" : "http",
+			"port" : "8087",
+			"spec" : {
+				"name" : "GetApplicationStatus.application",
+				"version" : "v1"
+			},
+			"swagger" : {
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "GetApplicationStatus",
+    "description" : "GetApplicationStatus service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/getapplicationstatus" : {
+      "get" : {
+        "summary" : "getGetApplicationStatus",
+        "description" : "getGetApplicationStatus",
+        "operationId" : "get-getapplicationstatus",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a getApplicationStatusResponse to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/getApplicationStatusResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "getApplicationStatusResponse" : {
+      "type" : "object",
+      "required" : [ "Status" ],
+      "properties" : {
+        "Status" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
+		},
+		{
+			"type" : "private",
+			"pingable" : true,
+			"protocol" : "http",
+			"port" : "7777"
+		}
+	]
+}

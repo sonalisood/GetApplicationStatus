@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sca:composite xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:BW="http://xsd.tns.tibco.com/amf/models/sca/implementationtype/BW" xmlns:XMLSchema="http://www.w3.org/2001/XMLSchema" xmlns:compositeext="http://schemas.tibco.com/amx/3.0/compositeext" xmlns:property="http://ns.tibco.com/bw/property" xmlns:rest="http://xsd.tns.tibco.com/bw/models/binding/rest" xmlns:sca="http://www.osoa.org/xmlns/sca/1.0" xmlns:scact="http://xsd.tns.tibco.com/amf/models/sca/componentType" xmlns:scaext="http://xsd.tns.tibco.com/amf/models/sca/extensions" xmi:id="_BfrjoMltEe29dMerNC85hQ" targetNamespace="http://tns.tibco.com/bw/composite/GetApplicationStatus" name="GetApplicationStatus" compositeext:version="1.0.0" compositeext:formatVersion="2">
+  <sca:service xmi:id="_PNU_YMltEe29dMerNC85hQ" name="getapplicationstatus" promote="ComponentProcess/getapplicationstatus">
+    <sca:interface.wsdl xmi:id="_PNuA8MltEe29dMerNC85hQ" interface="http://xmlns.example.com/20230323165241PLT#wsdl.interface(getapplicationstatus)" scaext:wsdlLocation="../Processes/getapplicationstatus/Process.bwp"/>
+    <scaext:binding xsi:type="rest:RestServiceBinding" xmi:id="_PN0uoMltEe29dMerNC85hQ" name="RestService" path="/getapplicationstatus" docBasePath="http://localhost:7777/GetApplicationStatus" docResourcePath="GetApplicationStatus" basePath="/" connector="getapplicationstatus.GetApplicationStatus" structuredData="true" technologyVersion="2.0" implementation="Service Descriptors/getapplicationstatus.Process-GetApplicationStatus.json">
+      <operation xmi:id="_PN1VsMltEe29dMerNC85hQ" operationName="get" nickname="get-getapplicationstatus" httpMethod="GET" notes="getGetApplicationStatus" responseStyle="element" outputPartName="item">
+        <clientFormat>json</clientFormat>
+        <clientRequestFormat>json</clientRequestFormat>
+      </operation>
+      <parameters xmi:id="_POLT8MltEe29dMerNC85hQ"/>
+      <advancedConfig xmi:id="_PN0uocltEe29dMerNC85hQ" blockingQueueSize="2147483647"/>
+    </scaext:binding>
+    <scact:bindingAdjunct xmi:id="_PN1VscltEe29dMerNC85hQ" bindingName="RestService"/>
+  </sca:service>
+  <sca:property xmi:id="_CLjLIMltEe29dMerNC85hQ" name="BW.APPNODE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_CLtjMMltEe29dMerNC85hQ" name="BW.DEPLOYMENTUNIT.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_CLwmgMltEe29dMerNC85hQ" name="BW.HOST.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_CL2tIMltEe29dMerNC85hQ" name="BW.DEPLOYMENTUNIT.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_CL5JYMltEe29dMerNC85hQ" name="BW.MODULE.VERSION" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_CL8MsMltEe29dMerNC85hQ" name="BW.MODULE.NAME" type="XMLSchema:string" scalable="true"/>
+  <sca:property xmi:id="_S4JrUMltEe29dMerNC85hQ" name="ResponseMessage" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_S-3-YMltEe29dMerNC85hQ" name="Environment" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_zsfEEMltEe29dMerNC85hQ" name="/HTTPConnection/HTTPPort" type="XMLSchema:int" scaext:simpleValue="0" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_4az0YMltEe29dMerNC85hQ" name="/JMSConnection/ConnectionFactoryQ" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5uNV8MltEe29dMerNC85hQ" name="/JMSConnection/ConnectionFactoryT" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5vzRYMltEe29dMerNC85hQ" name="/JMSConnection/ConnURI" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5xnPQMltEe29dMerNC85hQ" name="/JMSConnection/ConnUserId" type="XMLSchema:string" publicAccess="true" scalable="true"/>
+  <sca:property xmi:id="_5znaYMltEe29dMerNC85hQ" name="/JMSConnection/ConnPassword" type="property:password" scaext:simpleValue="#!OtPwUyNZgNaqEPd2Aqjo+g==" publicAccess="true" scalable="true"/>
+  <sca:component xmi:id="_BkvCwMltEe29dMerNC85hQ" name="ComponentProcess" compositeext:version="1.0.0.qualifier">
+    <scaext:implementation xsi:type="BW:BWComponentImplementation" xmi:id="_BkvCwcltEe29dMerNC85hQ" processName="getapplicationstatus.Process"/>
+    <sca:service xmi:id="_PNPf0MltEe29dMerNC85hQ" name="getapplicationstatus">
+      <sca:interface.wsdl xmi:id="_PNQt8MltEe29dMerNC85hQ" interface="http://xmlns.example.com/20230323165241PLT#wsdl.interface(getapplicationstatus)"/>
+    </sca:service>
+  </sca:component>
+</sca:composite>
