@@ -1,0 +1,72 @@
+{
+	"name" : "GetApplicationStatus.application",
+	"version" : "1.0",
+	"type" : "ipaas",
+	"propertyPrefix" : "iPaaS_USER_OverRIDE_",
+	"properties" : [
+		{
+			"name" : "Environment",
+			"datatype" : "string",
+			"default" : "DEV"
+		}
+	],
+	"endpoints" : [
+		{
+			"name" : "getApplicationStatus",
+			"protocol" : "http",
+			"port" : "8088",
+			"spec" : {
+				"name" : "GetApplicationStatus.application",
+				"version" : "v1"
+			},
+			"swagger" : {
+  "swagger" : "2.0",
+  "info" : {
+    "version" : "1.0",
+    "title" : "getApplicationStatus",
+    "description" : "getApplicationStatus service"
+  },
+  "host" : "localhost:8080",
+  "basePath" : "/",
+  "schemes" : [ "http" ],
+  "paths" : {
+    "/getapplicationstatus" : {
+      "get" : {
+        "summary" : "getGetApplicationStatus",
+        "description" : "getGetApplicationStatus",
+        "operationId" : "get-getapplicationstatus",
+        "consumes" : [ "application/json" ],
+        "produces" : [ "application/json" ],
+        "parameters" : [ ],
+        "responses" : {
+          "200" : {
+            "description" : "a getApplicationStatusResponse to be returned",
+            "schema" : {
+              "$ref" : "#/definitions/getApplicationStatusResponse"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions" : {
+    "getApplicationStatusResponse" : {
+      "type" : "object",
+      "required" : [ "Status" ],
+      "properties" : {
+        "Status" : {
+          "type" : "string"
+        }
+      }
+    }
+  }
+}
+		},
+		{
+			"type" : "private",
+			"pingable" : true,
+			"protocol" : "http",
+			"port" : "7777"
+		}
+	]
+}
